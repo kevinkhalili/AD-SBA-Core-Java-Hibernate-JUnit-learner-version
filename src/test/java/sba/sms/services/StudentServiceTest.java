@@ -2,8 +2,7 @@ package sba.sms.services;
 
 import lombok.AccessLevel;
 import lombok.experimental.FieldDefaults;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import sba.sms.models.Student;
 import sba.sms.utils.CommandLine;
 
@@ -36,6 +35,13 @@ class StudentServiceTest {
         ));
 
         assertThat(studentService.getAllStudents()).hasSameElementsAs(expected);
+
+    }
+
+    @BeforeEach
+    void init()
+    {
+        Student student = new STudent();
 
     }
 }
